@@ -1,39 +1,23 @@
+from Funktsioonid import*
 users=["kristina"]
 passwords=["12345"]
 
-password=passautomat()
-print(password) 
 while True:
-	print("Reg-1,Avt-2,Välja-3")
-	v=int(input())
-	if v==1:
-		print("Registreerimine")
-		while 1:
-			log=input("Kasutajatunnus")
-			if log not in users:
-				print("Tunnus soobib")
-				break
-			else:
-				print("See nimi juba on olemas listis")	
-		v=input("Arvuti-A või ise-I loob parool")
-		if v.upper()=="A":
-			pas=passautomat()
-		elif v.upper()=="I":			
-			while 1:
-				pas=input("Sisesta oma parool")
-				tulemus=paskontroll(pas)
-				if tulemus==True:
-					users.append(log)
-					passwords.append(pas)
-					break
-
-
-	elif v==2:
-		print("Avtoriseerimine")
-		#
-	elif v==3:
-		print("Välja")
-		break
-		#valmis
+	print("Näita kõike -0,Reg-1,AVt-2,Välja")
+pasword = ''.join([random.choice(ls) for x in range(12)])
+return psword 
+return psword
+def paskontroll(psword: str)->bool:
+	ls=list(psword)
+	for e in ls:
+		if e.isdigit(): d=True
+		if e.isalpha(): a=True
+		if e.isupper(): u=True
+		if e.islower():l=True
+		if e in list(".,:;!_*-+()/#¤%&"): s=True
+	if d==True and a==True and u==True and l==True and s==True:
+		t=True
 	else:
-		print("On vaja valida 1,2 või 3")# kõik on olemas
+		t=False
+
+
