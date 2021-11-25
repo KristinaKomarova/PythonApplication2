@@ -25,6 +25,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="funktsioonid.k.py" />
+    <Compile Include="programm.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="tööfailidega.py">
       <SubType>Code</SubType>
     </Compile>

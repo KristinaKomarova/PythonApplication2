@@ -21,9 +21,12 @@ spisok=loe_failist_listisse("TextFile1.txt")
 print(spisok)
 
 def salvesta_failisse(file:str):
+    """salvesta tekst failisse
+    """
     f=open(file,'a')
     text=input("Sisesta tekst:")
     f.write(text+'\n')
+    f.close()
 
 for i in range(10):
     salvesta_failisse("Loetelu.txt")
@@ -33,4 +36,4 @@ def faili_sisu_umberkirjutamine(file:str):
     with open (file,'W') as f:
         f.write(text+'\n')
 
-faili_sisu_umberkirjutamine(input("Faili nimetus")+".txt")
+faili_sisu_umberkirjutamine(input("TextFile1")+".txt")
